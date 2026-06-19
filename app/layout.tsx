@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -76,11 +77,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
-      <head>
-        {/* Explicit Google site verification meta tag (also provided via metadata.verification) */}
-        <meta name="google-site-verification" content="89-0ypn5DvdaPjOax57BILkjT1IyakZXHctJQsWhvhI" />
-      </head>
-      <body className="min-h-full flex flex-col bg-[#0a0a0f]">{children}</body>
+      <body className="min-h-full flex flex-col bg-[#0a0a0f]">
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
