@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     canonical: "https://bongpuffstream.com",
   },
   verification: {
-    google: "", // Add your Google Search Console verification code here
+    google: "89-0ypn5DvdaPjOax57BILkjT1IyakZXHctJQsWhvhI",
   },
 };
 
