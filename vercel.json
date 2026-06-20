@@ -1,0 +1,29 @@
+{
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "nodejs": "18.x",
+  "env": {
+    "NEXT_PUBLIC_SITE_NAME": {
+      "description": "Your site name for branding and metadata",
+      "required": false,
+      "default": "bongpuffstream"
+    },
+    "NEXT_PUBLIC_SITE_URL": {
+      "description": "Your site URL - update for custom domains or Vercel deployment",
+      "required": false,
+      "default": "https://bongpuffstream.vercel.app"
+    },
+    "NEXT_PUBLIC_SITE_DESCRIPTION": {
+      "description": "Site description for SEO and social media",
+      "required": false,
+      "default": "Watch Live TV & Sports Streaming Free"
+    },
+    "ADMIN_SECRET_KEY": {
+      "description": "Admin panel password - CHANGE THIS IN PRODUCTION!",
+      "required": false,
+      "default": "admin"
+    }
+  }
+}
