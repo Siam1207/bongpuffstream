@@ -13,13 +13,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Get site configuration from environment or defaults
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://bongpuffstream.vercel.app";
+const siteName = process.env.NEXT_PUBLIC_SITE_NAME || "bongpuffstream";
+const siteDescription = process.env.NEXT_PUBLIC_SITE_DESCRIPTION || "Stream your favorite international and local live TV channels smoothly without lag on bongpuffstream.";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bongpuffstream.com"),
-  title: "bongpuffstream | Watch Live TV & Sports Streaming Free",
-  description:
-    "Stream your favorite international and local live TV channels smoothly without lag on bongpuffstream.",
+  metadataBase: new URL(siteUrl),
+  title: `${siteName} | Watch Live TV & Sports Streaming Free`,
+  description: siteDescription,
   keywords: [
-    "bongpuffstream",
+    siteName,
     "live tv",
     "free streaming",
     "m3u8 player",
@@ -28,10 +32,10 @@ export const metadata: Metadata = {
     "live channels",
     "sports streaming",
   ],
-  authors: [{ name: "bongpuffstream", url: "https://bongpuffstream.com" }],
-  creator: "bongpuffstream",
-  publisher: "bongpuffstream",
-  applicationName: "bongpuffstream",
+  authors: [{ name: siteName, url: siteUrl }],
+  creator: siteName,
+  publisher: siteName,
+  applicationName: siteName,
   referrer: "origin-when-cross-origin",
   robots: {
     index: true,
@@ -45,22 +49,20 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "bongpuffstream | Watch Live TV & Sports Streaming Free",
-    description:
-      "Stream your favorite international and local live TV channels smoothly without lag on bongpuffstream.",
-    url: "https://bongpuffstream.com",
-    siteName: "bongpuffstream",
+    title: `${siteName} | Watch Live TV & Sports Streaming Free`,
+    description: siteDescription,
+    url: siteUrl,
+    siteName: siteName,
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "bongpuffstream | Watch Live TV & Sports Streaming Free",
-    description:
-      "Stream your favorite international and local live TV channels smoothly without lag on bongpuffstream.",
+    title: `${siteName} | Watch Live TV & Sports Streaming Free`,
+    description: siteDescription,
   },
   alternates: {
-    canonical: "https://bongpuffstream.com",
+    canonical: siteUrl,
   },
   verification: {
     google: "89-0ypn5DvdaPjOax57BILkjT1IyakZXHctJQsWhvhI",
